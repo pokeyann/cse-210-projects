@@ -9,21 +9,21 @@ class Program
     Console.Write("What is the magic number? ");
     int magicNumber = int.Parse(Console.ReadLine());
 
-    Console.Write("What is your guess? ");
-    int guess = int.Parse(Console.ReadLine());
+    int guess = -1;    // needed to iterate through while loop, was not part of the random generator as originally thought. 
 
     while (guess != magicNumber)
     {
+      Console.Write("What is your guess? ");    // Needed to be in the while loop for game continuation. 
+      guess = int.Parse(Console.ReadLine());
+
       if (guess < magicNumber)
       {
         Console.WriteLine("Higher");
-        break;
       }
 
       else if (guess > magicNumber)
       {
         Console.WriteLine("Lower");
-        break;
       }
 
       else
