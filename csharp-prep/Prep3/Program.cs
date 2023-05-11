@@ -6,29 +6,30 @@ class Program
   {
     Console.WriteLine("Hello Prep3 World!");
 
-    Console.WriteLine("What is the magic number? ");
-    string magicNumber = Console.ReadLine();
+    Console.Write("What is the magic number? ");
+    int magicNumber = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("What is your guess? ");
-    string guess = Console.ReadLine();
+    Console.Write("What is your guess? ");
+    int guess = int.Parse(Console.ReadLine());
 
-    int a = int.Parse(magicNumber);
-    int b = int.Parse(guess);
-
-    if (a > b)
+    while (guess != magicNumber)
     {
-      Console.WriteLine("Higher");
-    }
+      if (guess < magicNumber)
+      {
+        Console.WriteLine("Higher");
+        break;
+      }
 
-    else if (a < b)
-    {
-      Console.WriteLine("Lower");
-    }
+      else if (guess > magicNumber)
+      {
+        Console.WriteLine("Lower");
+        break;
+      }
 
-    else
-    {
-      Console.WriteLine("You guessed it!");
+      else
+      {
+        Console.WriteLine("You guessed it!");
+      }
     }
-
   }
 }
