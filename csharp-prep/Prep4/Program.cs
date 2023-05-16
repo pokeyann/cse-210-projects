@@ -32,9 +32,9 @@ class Program
     {
       sum += number;
     }
-
     Console.WriteLine($"The sum is: {sum}");
 
-
+    float average = ((float)sum) / numbers.Count;
+    Console.WriteLine($"The average is: {average}");
   }
 }
