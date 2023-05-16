@@ -20,6 +20,11 @@ class Program
 
       string userResponse = Console.ReadLine();
       userNumber = int.Parse(userResponse);
+
+      if (userNumber != 0)
+      {
+        numbers.Add(userNumber);
+      }
     }
 
     int sum = 0;
