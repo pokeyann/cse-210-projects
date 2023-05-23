@@ -19,8 +19,8 @@ class Program
     job2._startYear = 2050;
     job2._endYear = 2060;
 
-    job1.DisplayJobDetails();
-    job2.DisplayJobDetails();
+    //job1.Display();
+    //job2.Display();
 
     Resume resume1 = new Resume();
     resume1._name = "The Hulk";
@@ -28,10 +28,8 @@ class Program
     resume1._jobs.Add(job1);
     resume1._jobs.Add(job2);
 
-    Console.WriteLine(resume1._jobs[0]._jobTitle);
+    //Console.WriteLine(resume1._jobs[0]._jobTitle);
 
     resume1.Display();
-
-
   }
 }
