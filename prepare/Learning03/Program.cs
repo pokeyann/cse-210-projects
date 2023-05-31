@@ -50,10 +50,10 @@ public class Fraction
     _bottom = bottom;
   }
 
-  Fraction f1 = new Fraction();
+  /*Fraction f1 = new Fraction();
   f1.SetTop(1);
 
-  Console.WriteLine(f1.GetTop());
+  Console.WriteLine(f1.GetTop());*/
 
 
 }
