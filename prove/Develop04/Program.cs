@@ -142,7 +142,7 @@ Reflection class
 
         Console.WriteLine("Consider the following prompt: ");
 
-        List of prompts
+        List of Reflecting prompts
         Random
 
         Console.WriteLine("When you have something in mind, press enter to continue");
@@ -150,7 +150,7 @@ Reflection class
         Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
         Console.WriteLine("You may begin in: ");  --spinner number countdown animation
 
-        List of questions
+        List of Reflecting questions
         Random
         --spinner animation
 
@@ -196,7 +196,7 @@ Listing class
 
         Console.WriteLine("List as many responses you can to the following prompt: ");
 
-        List of prompt questions
+        List of Listing prompt questions 
         Random
 
         Console.WriteLine("You may begin in: "); --spinner number countdown animation
