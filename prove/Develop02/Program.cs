@@ -127,11 +127,25 @@ Program Journal
       Console.WriteLine(">" newEntry._writtenEntryFromUser);
 
       How does the date get saved to each entry, should date be added here, Display, or Save?
+      How does the specific prompt question get saved to file?  maybe automatic with entry?
     }    
 
     static void Display()
     {
+      DateTime theCurrentTime = DateTime.Now;
+      string dateText = theCurrentTime.ToShortDateString();
 
+
+    }
+
+    static void Save()
+    {
+      Console.WriteLine("What is the filename? ");
+      Console.ReadLine();
+
+      string fileName = @"C:\School\cse210spring\cse-210-projects\prove\Develop02\Entry.cs\journal.txt";
+
+      File.WriteAllText(fileName, {_writtenEntryFromUser});
     }
 
   Class PromptGenerator
