@@ -24,7 +24,7 @@ class Program
     switch (choice)
     {
       case 1: // Do not want it to write this when the user has picked. Want the correct method to run
-        Console.WriteLine("1. Write");
+        Console.WriteLine();
         Journal j = new Journal();
         j.WriteEntry();
         break;
