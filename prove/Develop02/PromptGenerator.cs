@@ -15,8 +15,8 @@ class PromptGenerator
 
     int randomPrompt = p.Next(prompt.Count);
 
-    Console.WriteLine(prompt.ElementAt(randomPrompt));
-
+    //Console.WriteLine(prompt.ElementAt(randomPrompt));
+    Console.WriteLine(prompt[randomPrompt]);
     return;
   }
 }

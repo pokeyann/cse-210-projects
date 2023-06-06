@@ -65,7 +65,7 @@ Welcome statement
 
 Program Class - Menu; after each choice complete return to this menu
   _choiceSelection do as switch, when choice is made program goes to correct class and/or method
-  _askChoice ask use what they would like to do, get user input of _choiceSelection
+  _askChoice ask user what they would like to do, get user input of _choiceSelection
 
 Program Journal
   Write
@@ -74,6 +74,8 @@ Program Journal
       random
     _writtenEntryFromUser, the user writes entry, give a > symbol to display to user where input will go.
   when press enter, returns to Program Class Menu
+
+
 
   Display
     All journal entries are displayed
@@ -124,7 +126,7 @@ Program Journal
       q.PromptQuestion();
 
       Journal newEntry = new Journal();
-      Console.WriteLine(">" newEntry._writtenEntryFromUser);
+      WriteLine(">" newEntry._writtenEntryFromUser);
 
       How does the date get saved to each entry, should date be added here, Display, or Save?
       How does the specific prompt question get saved to file?  maybe automatic with entry?
@@ -132,6 +134,19 @@ Program Journal
 
     static void Display()
     {
+
+      string filename = "journal.txt";
+      string[] lines = System.IO.File. ReadAllLines(journal.txt);
+
+      foreach (string line in lines)
+      {
+        string[] parts = line.Split(";");
+
+        DateTime dateText = parts[0];
+        string _writeEntryPrompt = parts[1];
+        string _writtenEntryFromUser = parts[2];
+      }
+
       DateTime theCurrentTime = DateTime.Now;
       string dateText = theCurrentTime.ToShortDateString();
 
