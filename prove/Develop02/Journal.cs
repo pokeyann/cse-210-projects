@@ -37,6 +37,20 @@ class Journal
     //date
     //PromptQuestion
     //WriteEntry
+
+    /*All journal entries are displayed
+    Date is diplayed for each _writeEntry
+    _writeEntryPrompt is displayed for each _writeEntry
+    _writtenEntryFromUser is displayed for each _writeEntry
+    will iterate through and show all _writeEntry
+
+      eg: 
+      Date: 12/9/2023 - Prompt: If I had one thing I could do over today, what would it be?
+      Speak more kindly to my children.
+    
+      Date: 12/9/2023 - Prompt: What was the best part of my day?
+      Seeing the sun shine.
+    When press enter, return to Program Class Menu*/
   }
   public void SaveToFile()
   {

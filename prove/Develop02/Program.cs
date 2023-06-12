@@ -23,15 +23,22 @@ class Program
 
     switch (choice)
     {
-      case 1: // Do not want it to write this when the user has picked. Want the correct method to run
-        Console.WriteLine();
+      case 1: //Want the correct method to run
+        
+
+        /*Console.WriteLine();
         Journal j = new Journal();
         j.WriteEntry();
+        romptGenerator q = new PromptGenerator();
+    q.PromptQuestion();*/
         break;
 
       case 2:
-        Console.WriteLine("2. Display");
-
+        Entry e = new Entry();
+        e.UserEntryList();
+        /*Console.WriteLine();
+        Entry e = new Entry();
+        e.UserEntryList();*/
         break;
 
       case 3:

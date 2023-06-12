@@ -30,10 +30,10 @@ class Entry
     DateTime theCurrentTime = DateTime.Now;
     string dateText = theCurrentTime.ToShortDateString();
 
-    //Journal j = new Journal(); //attempt to connect Journal.cs with Entry.cs, so then can add new entries to the list.
-    //j.WriteEntry();
+    Journal j = new Journal(); //attempt to connect Journal.cs with Entry.cs, so then can add new entries to the list.
+    j.WriteEntry();
 
-    //userEntryList.Add(j); //How do I add the WriteEntry from Journal to userEntry List?
+    //userEntryList.Add(Journal.); //How do I add the WriteEntry from Journal to userEntry List?
 
     Console.WriteLine(userEntryList.Capacity);
 
