@@ -1,8 +1,9 @@
+using System;
 using System.IO;
 
 class Journal
 {
-  // List of entry objects
+
 
   //METHODS
 
@@ -28,13 +29,40 @@ class Journal
     DateTime theCurrentTime = DateTime.Now;
     string dateText = theCurrentTime.ToShortDateString();
 
-    Console.Write("> ");
+    string filename = "journal.txt";
 
-    Console.ReadLine(); //How do I get user input saved to Entry List in Entry.cs
+    using (StreamWriter outputFile = new StreamWriter(filename))
+    {
+      outputFile.WriteLine();
+
+
+      outputFile.WriteLine("> ");
+
+      Console.ReadLine(); //How do I get user input saved to Entry List in Entry.cs
+    }
+
 
     //entry.Add(WriteEntry); How to add each WriteEntry to Entry()? Where to put DateTime and how to save specific
     //PromptQuestion for each Write to entry List?
   }
+
+  public void UserEntryList() // should DateTime and PromptQuestion be added to WriteEntry? I think that WriteEntry 
+                              //needs to added to entry list each time.  
+  {
+    List<string> userEntryList = new List<string>();
+
+    Journal j = new Journal(); //attempt to connect Journal.cs with Entry.cs, so then can add new entries to the list.
+    j.WriteEntry();
+
+    //userEntryList.Add(Journal.); //How do I add the WriteEntry from Journal to userEntry List?
+
+    Console.WriteLine(userEntryList.Capacity);
+
+
+    return;
+
+  }
+
   public void Display()
   {
 
@@ -56,11 +84,11 @@ class Journal
       eg: 
       Date: 12/9/2023 - Prompt: If I had one thing I could do over today, what would it be?
       Speak more kindly to my children.
-    
+
       Date: 12/9/2023 - Prompt: What was the best part of my day?
       Seeing the sun shine.
     When press enter, return to Program Class Menu
-    
+
     For each userEntryList iterate through and display*/
 
   }
@@ -68,6 +96,19 @@ class Journal
   {
     Console.WriteLine("What is the filename? ");
     Console.ReadLine();
+
+    // Below is the bones of the code, but the details are wrong, once figure out entry and write entry fix.
+    string filename = "journal.txt";
+
+    /*using (StreamWriter outputFile = new StreamWriter(filename))
+    {
+      foreach ()
+      {
+        outputFile.WriteLine();
+      }
+
+      SaveToFile(); // where should this be?
+    }*/
 
     return;
   }
