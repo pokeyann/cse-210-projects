@@ -9,59 +9,60 @@ class Program
 
     Console.WriteLine("Welcome to the Journaling!");
 
-    Console.WriteLine("Please choose one of the following: ");
 
-    Console.WriteLine("1. Write");
-    Console.WriteLine("2. Display");
-    Console.WriteLine("3. Load");
-    Console.WriteLine("4. Save");
-    Console.WriteLine("5. Quit");
-
-    Console.Write("What would you like to do? ");
-
-    int choice = int.Parse(Console.ReadLine());
-
-    switch (choice)
+    bool loopContinue = true;
+    while (loopContinue)
     {
-      case 1: //Want the correct method to run
-        
+      Console.WriteLine("Please choose one of the following: ");
 
-        /*Console.WriteLine();
-        Journal j = new Journal();
-        j.WriteEntry();
-        romptGenerator q = new PromptGenerator();
-    q.PromptQuestion();*/
-        break;
+      Console.WriteLine("1. Write");
+      Console.WriteLine("2. Display");
+      Console.WriteLine("3. Load");
+      Console.WriteLine("4. Save");
+      Console.WriteLine("5. Quit");
 
-      case 2:
-        Entry e = new Entry();
-        e.UserEntryList();
-        /*Console.WriteLine();
-        Entry e = new Entry();
-        e.UserEntryList();*/
-        break;
+      Console.Write("What would you like to do? ");
 
-      case 3:
-        Console.WriteLine("3. Load");
-        break;
+      int choice = int.Parse(Console.ReadLine());
 
-      case 4:
-        Console.WriteLine("4. Save");
-        break;
+      switch (choice)
+      {
+        case 1: //Want the correct method to run
+          Journal j = new Journal();
+          j.WriteEntry();
 
-      case 5:
-        Console.WriteLine("5. Quit");
-        break;
+          /*Console.WriteLine();
+          Journal j = new Journal();
+          j.WriteEntry();
+          romptGenerator q = new PromptGenerator();
+      q.PromptQuestion();*/
+          break;
+
+        case 2:
+          Entry e = new Entry();
+          e.UserEntryList();
+          /*Console.WriteLine();
+          Entry e = new Entry();
+          e.UserEntryList();*/
+          break;
+
+        case 3:
+          Journal l = new Journal();
+          l.LoadFromFile();
+          break;
+
+        case 4:
+          Journal s = new Journal();
+          s.SaveToFile();
+          break;
+
+        case 5:
+          Journal q = new Journal();
+          q.Quit();
+          break;
+      }
     }
 
-    Journal w = new Journal();
-    w.WriteEntry();
-
-
-    //Entry();
-    //SaveToFile();
-    //LoadFromFile();
-    // Quit();
   }
 
 

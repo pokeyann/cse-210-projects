@@ -25,15 +25,24 @@ class Journal
     PromptGenerator q = new PromptGenerator();
     q.PromptQuestion();
 
+    DateTime theCurrentTime = DateTime.Now;
+    string dateText = theCurrentTime.ToShortDateString();
+
     Console.Write("> ");
 
-    Console.ReadLine(); //How do I get user input saved to Entry List see line 36 in Entry.cs
+    Console.ReadLine(); //How do I get user input saved to Entry List in Entry.cs
 
     //entry.Add(WriteEntry); How to add each WriteEntry to Entry()? Where to put DateTime and how to save specific
     //PromptQuestion for each Write to entry List?
   }
   public void Display()
   {
+
+    /*foreach (string item in UserEntryList)
+    {
+      Console.WriteLine(UserEntryList);
+    }*/
+
     //date
     //PromptQuestion
     //WriteEntry
@@ -50,7 +59,10 @@ class Journal
     
       Date: 12/9/2023 - Prompt: What was the best part of my day?
       Seeing the sun shine.
-    When press enter, return to Program Class Menu*/
+    When press enter, return to Program Class Menu
+    
+    For each userEntryList iterate through and display*/
+
   }
   public void SaveToFile()
   {

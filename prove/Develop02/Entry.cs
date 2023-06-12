@@ -26,10 +26,6 @@ class Entry
   {
     List<string> userEntryList = new List<string>();
 
-    // display date, PromptQuestion, WriteEntry
-    DateTime theCurrentTime = DateTime.Now;
-    string dateText = theCurrentTime.ToShortDateString();
-
     Journal j = new Journal(); //attempt to connect Journal.cs with Entry.cs, so then can add new entries to the list.
     j.WriteEntry();
 
