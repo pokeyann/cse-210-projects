@@ -27,23 +27,14 @@ class Program
 
       switch (choice)
       {
-        case 1: //Want the correct method to run
+        case 1: //seems to be working 6-12-23
           Journal j = new Journal();
           j.WriteEntry();
-
-          /*Console.WriteLine();
-          Journal j = new Journal();
-          j.WriteEntry();
-          romptGenerator q = new PromptGenerator();
-      q.PromptQuestion();*/
           break;
 
         case 2:
           Entry e = new Entry();
           e.UserEntryList();
-          /*Console.WriteLine();
-          Entry e = new Entry();
-          e.UserEntryList();*/
           break;
 
         case 3:
@@ -56,7 +47,7 @@ class Program
           s.SaveToFile();
           break;
 
-        case 5:
+        case 5: //works 6-12-23
           Journal q = new Journal();
           q.Quit();
           break;
