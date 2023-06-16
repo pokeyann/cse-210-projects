@@ -31,7 +31,7 @@ class Journal
 
     List<string> userEntryList = new List<string>();
 
-    userEntryList.Add(userInput);
+    userEntryList.Add($"{userInput}");
 
     foreach (string w in userEntryList)
     {
@@ -44,10 +44,14 @@ class Journal
 
   public void Display() // showing prompt question 6-11-23
   {
+    Console.WriteLine("Test");
+    //Journal item = new Journal();
+    //item.WriteEntry();
 
-    /*foreach (string item in UserEntryList)
+
+    /*foreach (userInput in userEntryList);
     {
-      Console.WriteLine(UserEntryList);
+      Console.WriteLine();
     }*/
 
     //date

@@ -26,16 +26,16 @@ class Program
       int choice = int.Parse(Console.ReadLine());
 
 
-
+      switch (choice)
       {
         case 1: //seems to be working 6-12-23
           Journal j = new Journal();
           j.WriteEntry();
           break;
 
-        case 2:
-          Entry e = new Entry();
-          e.UserEntryList();
+        case 2: // works 6-15-23
+          Journal d = new Journal();
+          d.Display();
           break;
 
         case 3:
@@ -52,13 +52,13 @@ class Program
           Journal q = new Journal();
           q.Quit();
           break;
-        }
       }
-
     }
 
-
   }
+
+
+}
 
 /*
 Welcome statement
