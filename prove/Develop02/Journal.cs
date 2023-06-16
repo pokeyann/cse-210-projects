@@ -11,6 +11,11 @@ class Journal
   // Display
   //  loop through the list
   //    call the entry.display()
+
+  string prompt { get; set; }
+  string userEntry { get; set; }
+  DateTime date { get; set; }
+
   List<string> userInput = new List<string>();
 
   public void WriteEntry()
@@ -20,7 +25,6 @@ class Journal
 
     DateTime theCurrentTime = DateTime.Now;
     string dateText = theCurrentTime.ToShortDateString();
-    //Console.WriteLine(dateText);
 
     Console.Write("> ");
 
@@ -28,29 +32,17 @@ class Journal
 
     userInput.Add(input);
 
-    foreach (string w in userInput)
-    {
-      Console.WriteLine(w);
-    }
-
-    Console.WriteLine(userInput.Capacity);
   }
 
   public void Display()
   {
     Console.WriteLine("Test"); // does display
-    //Journal item = new Journal();
-    //item.WriteEntry();
-
-
-    /*foreach (userInput in userEntryList);
-    {
-      Console.WriteLine();
-    }*/
-
-    //date
-    //PromptQuestion
-    //WriteEntry
+    //From Write Entry 
+    //{
+    //{promptQuestion}
+    //{dateText}
+    //{userInput}
+    //}
 
     /*All journal entries are displayed
     Date is diplayed for each _writeEntry
