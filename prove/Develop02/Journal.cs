@@ -2,10 +2,7 @@ using System;
 using System.IO;
 
 class Journal
-{
-
-
-  //METHODS
+{ //METHODS
 
   // Write
   //  Create an Entry object
@@ -14,7 +11,7 @@ class Journal
   // Display
   //  loop through the list
   //    call the entry.display()
-
+  List<string> userInput = new List<string>();
 
   public void WriteEntry()
   {
@@ -27,24 +24,21 @@ class Journal
 
     Console.Write("> ");
 
-    string userInput = Console.ReadLine();
+    string input = Console.ReadLine();
 
-    List<string> userEntryList = new List<string>();
+    userInput.Add(input);
 
-    userEntryList.Add($"{userInput}");
-
-    foreach (string w in userEntryList)
+    foreach (string w in userInput)
     {
       Console.WriteLine(w);
     }
 
-    Console.WriteLine(userEntryList.Capacity);
+    Console.WriteLine(userInput.Capacity);
   }
 
-
-  public void Display() // showing prompt question 6-11-23
+  public void Display()
   {
-    Console.WriteLine("Test");
+    Console.WriteLine("Test"); // does display
     //Journal item = new Journal();
     //item.WriteEntry();
 
@@ -83,8 +77,11 @@ class Journal
 
     using (StreamWriter outputFile = new StreamWriter(filename))
     {
-      outputFile.WriteLine($"{filename}");
+      //foreach (string userInput in input)
+      outputFile.WriteLine($"{userInput}");
     }
+
+    Console.WriteLine("test"); // did not work
 
     // SaveToFile();
 

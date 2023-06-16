@@ -21,15 +21,10 @@ class Entry
   // Display()
   //    display date, repsonse, prompt
 
-  public void UserEntryList() // should DateTime and PromptQuestion be added to WriteEntry? I think that WriteEntry 
-                              //needs to added to entry list each time.  
+  public void UserEntryList()
   {
-    //List<string> userEntryList = new List<string>();
 
-    //Journal j = new Journal(); //attempt to connect Journal.cs with Entry.cs, so then can add new entries to the list.
-    //j.WriteEntry();
 
-    //userEntryList.Add(Journal.); //How do I add the WriteEntry from Journal to userEntry List?
 
 
 
